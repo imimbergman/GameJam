@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    int speed = 1;
+    float speed = 100f;
+    float rotationAroundX = 45;
+    float rotationAroundY = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -14,21 +16,22 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        transform.localRotation = Quaternion.Euler(rotationAroundX, rotationAroundY, 0);
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+            rotationAroundY += speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(new Vector3(-speed * Time.deltaTime, 0, 0));
+            rotationAroundY -= speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && rotationAroundX < 90)
         {
-            transform.Translate(new Vector3(0, -speed * Time.deltaTime, 0));
+            rotationAroundX += speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && rotationAroundX > 0)
         {
-            transform.Translate(new Vector3(0, speed * Time.deltaTime, 0));
+            rotationAroundX -= speed * Time.deltaTime;
         }
     }
 }
