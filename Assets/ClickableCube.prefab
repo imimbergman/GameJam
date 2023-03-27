@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5586674826119454222}
   - component: {fileID: 5586674826119454223}
   - component: {fileID: 5586674826119454192}
+  - component: {fileID: 1083099239}
   m_Layer: 0
   m_Name: ClickableCube
   m_TagString: Clickable
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5586674826119454194}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.74, y: 0, z: 2.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1083099239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5586674826119454194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4197333714d012b498a50c2086ecd6a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testBuilding: {fileID: 1137213374544662245, guid: b56ef09e96ebf69458f833cb9f3df7cd, type: 3}
