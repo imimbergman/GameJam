@@ -12386,7 +12386,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479366403}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10700739d61c60e4c9fb53f7e4be5fcb, type: 3}
   m_Name: 
@@ -13104,6 +13104,8 @@ MonoBehaviour:
   coalPlant: {fileID: 2173182878037009470, guid: 500410dd955ce934895c2de9078a3864, type: 3}
   solarPlant: {fileID: 2173182878037009470, guid: 500410dd955ce934895c2de9078a3864, type: 3}
   windPlant: {fileID: 2173182878037009470, guid: 500410dd955ce934895c2de9078a3864, type: 3}
+  climateHealth: 1
+  moneyAmount: 0
 --- !u!4 &1559856252
 Transform:
   m_ObjectHideFlags: 0
@@ -15945,7 +15947,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030094919}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f79ab3717f998e4a9912532a3ede93e, type: 3}
   m_Name: 
