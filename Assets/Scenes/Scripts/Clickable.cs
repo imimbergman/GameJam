@@ -1,42 +1,72 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Timers;
 using System.Xml.Linq;
+using TMPro;
 using TreeEditor;
 using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
+using Timer = System.Timers.Timer;
 
 public class Clickable : MonoBehaviour
 {
-    Vector3 lastpos;
     public GameObject coalPlant;
     public GameObject solarPlant;
     public GameObject windPlant;
 
+    public float climateHealth = 1.0f;
+    public int moneyAmount;
+
+    TextMeshProUGUI moneyText;
+    Image climateBar;
+
     List<PowerPlant> powerPlants = new List<PowerPlant>();
 
     PowerPlant coal = new PowerPlant(
-    100,
-    150,
-    2,
-    0.5f,
-    0.8f,
-    0.99f,
-    Types.Coal);
+        100,
+        150,
+        40,
+        0.8f,
+        0.8f,
+        0.9f,
+        Types.Coal
+        );
 
     PowerPlant solar = new PowerPlant(
         400,
         200,
-        1,
+        10,
         0.75f,
         0.9f,
         0.99999f,
-        Types.Coal);
+        Types.Solar
+        );
+
+    PowerPlant wind = new PowerPlant(
+        700,
+        250,
+        30,
+        0.55f,
+        0.85f,
+        0.99999f,
+        Types.Wind
+        );
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
+        climateBar = GameObject.Find("HPBar").GetComponent<Image>();
+        moneyAmount = 1000;
+        Timer t = new System.Timers.Timer();
+        t.Elapsed += new ElapsedEventHandler(updateValues);
+        t.Interval = 5000;
+        t.Start();
     }
 
     // Update is called once per frame
@@ -56,7 +86,7 @@ public class Clickable : MonoBehaviour
                 }
             }
         }
-        
+        UpdateUi();
     }
 
     void ConstructPowerPlant(Vector3 position, PowerPlant plant, GameObject parent)
@@ -77,15 +107,33 @@ public class Clickable : MonoBehaviour
         plant = plant.DeepCopy();
         plant.parent = parent;
 
+        if (moneyAmount >= plant.productionCost)
+        {
+            moneyAmount -= plant.productionCost;
+        }
+        else
+        {
+            Debug.Log("No money");
+            return;
+        }
+
         if (plant.type == Types.Solar)
         {
             spawn = Instantiate(solarPlant, position, Quaternion.identity);
             plant.instance = spawn;
+            if(moneyAmount < solar.productionCost)
+            {
+                return;
+            }
         } 
         else if (plant.type == Types.Coal)
         {
             spawn = Instantiate(coalPlant, position, Quaternion.identity);
             plant.instance = spawn;
+            if (moneyAmount < coal.productionCost)
+            {
+                return;
+            }
         }
         else if (plant.type == Types.Wind)
         {
@@ -95,6 +143,26 @@ public class Clickable : MonoBehaviour
         }
 
         powerPlants.Add(plant);
+        Debug.Log("Created");
+        
+    }
+
+    void UpdateUi()
+    {
+        moneyText.SetText("" + moneyAmount.ToString());
+        climateBar.fillAmount = climateHealth;
+    }
+
+    void updateValues(object source, ElapsedEventArgs e)
+    {
+        if (powerPlants.Count > 0)
+        {
+            for (int i = 0; i < powerPlants.Count; i++)
+            {
+                moneyAmount += powerPlants[i].runningEarnings;
+                climateHealth *= powerPlants[i].runningClimateImpact;
+            }
+        }
     }
 }
 
@@ -149,3 +217,4 @@ public enum Types
     Wind,
     Coal
 }
+
