@@ -24,6 +24,12 @@ public class Clickable : MonoBehaviour
     TextMeshProUGUI moneyText;
     Image climateBar;
 
+    float LerpTarget = 1.0f;
+    float LerpStart = 1.0f;
+    Timer timer;
+
+    float LerpTimer;
+
     List<PowerPlant> powerPlants = new List<PowerPlant>();
 
     PowerPlant coal = new PowerPlant(
@@ -63,10 +69,10 @@ public class Clickable : MonoBehaviour
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         climateBar = GameObject.Find("HPBar").GetComponent<Image>();
         moneyAmount = 1000;
-        Timer t = new System.Timers.Timer();
-        t.Elapsed += new ElapsedEventHandler(updateValues);
-        t.Interval = 5000;
-        t.Start();
+        timer = new System.Timers.Timer();
+        timer.Elapsed += new ElapsedEventHandler(updateValues);
+        timer.Interval = 5000;
+        timer.Start();
     }
 
     // Update is called once per frame
@@ -83,6 +89,9 @@ public class Clickable : MonoBehaviour
                 {
                     ConstructPowerPlant(hit.transform.position, coal, hit.transform.gameObject);
                     //this.enabled = false;
+                } else if (hit.transform.gameObject.tag == "Grass")
+                {
+                    Debug.Log("Grass");
                 }
             }
         }
@@ -107,38 +116,26 @@ public class Clickable : MonoBehaviour
         plant = plant.DeepCopy();
         plant.parent = parent;
 
-        if (moneyAmount >= plant.productionCost)
+        if (moneyAmount < plant.productionCost)
         {
-            moneyAmount -= plant.productionCost;
-        }
-        else
-        {
-            Debug.Log("No money");
             return;
         }
+
+        moneyAmount -= plant.productionCost;
 
         if (plant.type == Types.Solar)
         {
             spawn = Instantiate(solarPlant, position, Quaternion.identity);
             plant.instance = spawn;
-            if(moneyAmount < solar.productionCost)
-            {
-                return;
-            }
         } 
         else if (plant.type == Types.Coal)
         {
             spawn = Instantiate(coalPlant, position, Quaternion.identity);
             plant.instance = spawn;
-            if (moneyAmount < coal.productionCost)
-            {
-                return;
-            }
         }
         else if (plant.type == Types.Wind)
         {
             spawn = Instantiate(windPlant, position, Quaternion.identity);
-            spawn.SetActive(true);
             plant.instance = spawn;
         }
 
@@ -149,6 +146,19 @@ public class Clickable : MonoBehaviour
 
     void UpdateUi()
     {
+
+        //if (powerPlants.Count > 0)
+        //{
+        //    for (int i = 0; i < powerPlants.Count; i++)
+        //    {
+        //        climateHealth *= powerPlants[i].runningClimateImpact;
+        //        Debug.Log(Time.deltaTime);
+        //    }
+        //}
+        LerpTimer += Time.deltaTime;
+
+        climateHealth = Mathf.Lerp(LerpStart, LerpTarget, LerpTimer / 5.0f);
+
         moneyText.SetText("" + moneyAmount.ToString());
         climateBar.fillAmount = climateHealth;
     }
@@ -157,11 +167,16 @@ public class Clickable : MonoBehaviour
     {
         if (powerPlants.Count > 0)
         {
+            float FinalHealth = 1;
+            LerpStart = climateHealth;
+            LerpTimer = 0;
             for (int i = 0; i < powerPlants.Count; i++)
             {
                 moneyAmount += powerPlants[i].runningEarnings;
-                climateHealth *= powerPlants[i].runningClimateImpact;
+                //Lerp(climateHealth, climateHealth * powerPlants[i].runningClimateImpact, 0);
+                FinalHealth *= powerPlants[i].runningClimateImpact;
             }
+            LerpTarget = climateHealth * FinalHealth;
         }
     }
 }

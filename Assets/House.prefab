@@ -47,11 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0dddc1f945f8444184934075f468022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-  LerpAmount: 0.5
-=======
   LerpAmount: 0.4
->>>>>>> Stashed changes
   lerpSpeed: 0.5
   vibrationSpeed: 0.15
 --- !u!198 &609321734514385793

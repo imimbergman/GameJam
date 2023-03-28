@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &15214241
@@ -203,6 +207,7 @@ GameObject:
   - component: {fileID: 15214242}
   - component: {fileID: 15214244}
   - component: {fileID: 15214243}
+  - component: {fileID: 15214245}
   m_Layer: 0
   m_Name: House (4)
   m_TagString: Untagged
@@ -281,6 +286,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15214241}
   m_Mesh: {fileID: 4887216478360415443, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &15214245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15214241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &23829015
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +313,7 @@ GameObject:
   - component: {fileID: 23829017}
   m_Layer: 0
   m_Name: Ground (87)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,7 +410,7 @@ GameObject:
   - component: {fileID: 27978829}
   m_Layer: 0
   m_Name: Ground (57)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,7 +507,7 @@ GameObject:
   - component: {fileID: 31318551}
   m_Layer: 0
   m_Name: Ground (86)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -715,6 +733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &42928716
@@ -731,7 +753,7 @@ GameObject:
   - component: {fileID: 42928718}
   m_Layer: 0
   m_Name: Ground (97)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -925,7 +947,7 @@ GameObject:
   - component: {fileID: 61431225}
   m_Layer: 0
   m_Name: Ground (93)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1022,7 +1044,7 @@ GameObject:
   - component: {fileID: 73407837}
   m_Layer: 0
   m_Name: Ground (74)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1119,7 +1141,7 @@ GameObject:
   - component: {fileID: 75263857}
   m_Layer: 0
   m_Name: Ground (119)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1213,6 +1235,7 @@ GameObject:
   - component: {fileID: 84812760}
   - component: {fileID: 84812762}
   - component: {fileID: 84812761}
+  - component: {fileID: 84812763}
   m_Layer: 0
   m_Name: pCylinder3 (8)
   m_TagString: Untagged
@@ -1290,6 +1313,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84812759}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &84812763
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84812759}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &91334856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1304,7 +1340,7 @@ GameObject:
   - component: {fileID: 91334858}
   m_Layer: 0
   m_Name: Ground (125)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1454,6 +1490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &114302459
@@ -1470,7 +1510,7 @@ GameObject:
   - component: {fileID: 114302461}
   m_Layer: 0
   m_Name: Ground (81)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1567,7 +1607,7 @@ GameObject:
   - component: {fileID: 114568788}
   m_Layer: 0
   m_Name: Ground (133)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1661,6 +1701,7 @@ GameObject:
   - component: {fileID: 118410468}
   - component: {fileID: 118410470}
   - component: {fileID: 118410469}
+  - component: {fileID: 118410471}
   m_Layer: 0
   m_Name: House1 (3)
   m_TagString: Untagged
@@ -1740,6 +1781,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118410467}
   m_Mesh: {fileID: -4315542600374322986, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &118410471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118410467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &126323900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,6 +1805,7 @@ GameObject:
   - component: {fileID: 126323903}
   - component: {fileID: 126323902}
   - component: {fileID: 126323901}
+  - component: {fileID: 126323904}
   m_Layer: 0
   m_Name: House (2)
   m_TagString: Untagged
@@ -1829,6 +1884,19 @@ Transform:
   m_Father: {fileID: 203175478}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &126323904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126323900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &126663982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,7 +1911,7 @@ GameObject:
   - component: {fileID: 126663984}
   m_Layer: 0
   m_Name: Ground (106)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1940,7 +2008,7 @@ GameObject:
   - component: {fileID: 137463210}
   m_Layer: 0
   m_Name: Ground (88)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2095,6 +2163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1001 &166855087
@@ -2163,6 +2235,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
       propertyPath: m_Name
       value: grassblock (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
@@ -2233,6 +2309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &192549622
@@ -2249,7 +2329,7 @@ GameObject:
   - component: {fileID: 192549624}
   m_Layer: 0
   m_Name: Ground (44)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2401,7 +2481,7 @@ GameObject:
   - component: {fileID: 228647491}
   m_Layer: 0
   m_Name: Ground (45)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2498,7 +2578,7 @@ GameObject:
   - component: {fileID: 243386083}
   m_Layer: 0
   m_Name: Ground (90)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2595,7 +2675,7 @@ GameObject:
   - component: {fileID: 249492980}
   m_Layer: 0
   m_Name: Ground (28)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2692,7 +2772,7 @@ GameObject:
   - component: {fileID: 250234616}
   m_Layer: 0
   m_Name: Ground (72)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2789,7 +2869,7 @@ GameObject:
   - component: {fileID: 254187000}
   m_Layer: 0
   m_Name: Ground (31)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2886,7 +2966,7 @@ GameObject:
   - component: {fileID: 258856385}
   m_Layer: 0
   m_Name: Ground (3)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2983,7 +3063,7 @@ GameObject:
   - component: {fileID: 260892334}
   m_Layer: 0
   m_Name: Ground (104)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3133,6 +3213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1001 &286950566
@@ -3202,6 +3286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &293149346
@@ -3218,7 +3306,7 @@ GameObject:
   - component: {fileID: 293149348}
   m_Layer: 0
   m_Name: Ground (64)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3312,6 +3400,7 @@ GameObject:
   - component: {fileID: 306748572}
   - component: {fileID: 306748574}
   - component: {fileID: 306748573}
+  - component: {fileID: 306748575}
   m_Layer: 0
   m_Name: House1 (4)
   m_TagString: Untagged
@@ -3391,6 +3480,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306748571}
   m_Mesh: {fileID: -4315542600374322986, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &306748575
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306748571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &311610323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,7 +3507,7 @@ GameObject:
   - component: {fileID: 311610325}
   m_Layer: 0
   m_Name: Ground (127)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3502,7 +3604,7 @@ GameObject:
   - component: {fileID: 312208162}
   m_Layer: 0
   m_Name: Ground (82)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3652,6 +3754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &321914939
@@ -3668,7 +3774,7 @@ GameObject:
   - component: {fileID: 321914941}
   m_Layer: 0
   m_Name: Ground (10)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3818,6 +3924,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1001 &331950003
@@ -3887,6 +3997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &375288030 stripped
@@ -3908,7 +4022,7 @@ GameObject:
   - component: {fileID: 375400139}
   m_Layer: 0
   m_Name: Ground (62)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4081,7 +4195,7 @@ GameObject:
   - component: {fileID: 393429924}
   m_Layer: 0
   m_Name: Ground (2)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4231,6 +4345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &417911939
@@ -4247,7 +4365,7 @@ GameObject:
   - component: {fileID: 417911941}
   m_Layer: 0
   m_Name: Ground (49)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4402,6 +4520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &464514989
@@ -4418,7 +4540,7 @@ GameObject:
   - component: {fileID: 464514991}
   m_Layer: 0
   m_Name: Ground (53)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4515,7 +4637,7 @@ GameObject:
   - component: {fileID: 478340724}
   m_Layer: 0
   m_Name: Ground (14)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4612,7 +4734,7 @@ GameObject:
   - component: {fileID: 478357629}
   m_Layer: 0
   m_Name: Ground (21)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4709,7 +4831,7 @@ GameObject:
   - component: {fileID: 483725222}
   m_Layer: 0
   m_Name: Ground (56)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4806,7 +4928,7 @@ GameObject:
   - component: {fileID: 491513503}
   m_Layer: 0
   m_Name: Ground (113)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4908,7 +5030,7 @@ GameObject:
   - component: {fileID: 526038423}
   m_Layer: 0
   m_Name: Ground (66)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5058,6 +5180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &534381061
@@ -5074,7 +5200,7 @@ GameObject:
   - component: {fileID: 534381063}
   m_Layer: 0
   m_Name: Ground (142)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5168,6 +5294,7 @@ GameObject:
   - component: {fileID: 535956691}
   - component: {fileID: 535956693}
   - component: {fileID: 535956692}
+  - component: {fileID: 535956694}
   m_Layer: 0
   m_Name: House1 (1)
   m_TagString: Untagged
@@ -5247,6 +5374,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535956690}
   m_Mesh: {fileID: -4315542600374322986, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &535956694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535956690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &537433081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5314,6 +5454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &559873782
@@ -5330,7 +5474,7 @@ GameObject:
   - component: {fileID: 559873784}
   m_Layer: 0
   m_Name: Ground (84)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5432,7 +5576,7 @@ GameObject:
   - component: {fileID: 570420753}
   m_Layer: 0
   m_Name: Ground (38)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5526,6 +5670,7 @@ GameObject:
   - component: {fileID: 573392209}
   - component: {fileID: 573392211}
   - component: {fileID: 573392210}
+  - component: {fileID: 573392212}
   m_Layer: 0
   m_Name: pCylinder3 (3)
   m_TagString: Untagged
@@ -5603,6 +5748,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573392208}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &573392212
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573392208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &580641132
 GameObject:
   m_ObjectHideFlags: 0
@@ -5617,7 +5775,7 @@ GameObject:
   - component: {fileID: 580641134}
   m_Layer: 0
   m_Name: Ground (37)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5714,7 +5872,7 @@ GameObject:
   - component: {fileID: 583946168}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5808,6 +5966,7 @@ GameObject:
   - component: {fileID: 608569127}
   - component: {fileID: 608569129}
   - component: {fileID: 608569128}
+  - component: {fileID: 608569130}
   m_Layer: 0
   m_Name: House (3)
   m_TagString: Untagged
@@ -5886,6 +6045,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608569126}
   m_Mesh: {fileID: 4887216478360415443, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &608569130
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608569126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &610077934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
@@ -5905,7 +6077,7 @@ GameObject:
   - component: {fileID: 621437873}
   m_Layer: 0
   m_Name: Ground (33)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6012,7 +6184,7 @@ GameObject:
   - component: {fileID: 625353525}
   m_Layer: 0
   m_Name: Ground (85)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6162,6 +6334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &645107393
@@ -6291,6 +6467,7 @@ GameObject:
   - component: {fileID: 692294715}
   - component: {fileID: 692294717}
   - component: {fileID: 692294716}
+  - component: {fileID: 692294718}
   m_Layer: 0
   m_Name: House1 (2)
   m_TagString: Untagged
@@ -6370,6 +6547,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692294714}
   m_Mesh: {fileID: -4315542600374322986, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &692294718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692294714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -6478,7 +6668,7 @@ GameObject:
   - component: {fileID: 712364882}
   m_Layer: 0
   m_Name: Ground (135)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6572,6 +6762,7 @@ GameObject:
   - component: {fileID: 713196103}
   - component: {fileID: 713196105}
   - component: {fileID: 713196104}
+  - component: {fileID: 713196106}
   m_Layer: 0
   m_Name: House2 (1)
   m_TagString: Untagged
@@ -6651,6 +6842,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713196102}
   m_Mesh: {fileID: -5327603451083163059, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &713196106
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713196102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &715795666
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,6 +6866,7 @@ GameObject:
   - component: {fileID: 715795667}
   - component: {fileID: 715795669}
   - component: {fileID: 715795668}
+  - component: {fileID: 715795670}
   m_Layer: 0
   m_Name: pCylinder3 (1)
   m_TagString: Untagged
@@ -6739,6 +6944,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 715795666}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &715795670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715795666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &725879111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6806,6 +7024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &735069679
@@ -6822,7 +7044,7 @@ GameObject:
   - component: {fileID: 735069681}
   m_Layer: 0
   m_Name: Ground (140)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7016,7 +7238,7 @@ GameObject:
   - component: {fileID: 741694768}
   m_Layer: 0
   m_Name: Ground (48)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7113,7 +7335,7 @@ GameObject:
   - component: {fileID: 751439950}
   m_Layer: 0
   m_Name: Ground (110)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7207,6 +7429,7 @@ GameObject:
   - component: {fileID: 752427373}
   - component: {fileID: 752427375}
   - component: {fileID: 752427374}
+  - component: {fileID: 752427376}
   m_Layer: 0
   m_Name: pCylinder3 (5)
   m_TagString: Untagged
@@ -7284,6 +7507,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752427372}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &752427376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752427372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &775388707
 GameObject:
   m_ObjectHideFlags: 0
@@ -7298,7 +7534,7 @@ GameObject:
   - component: {fileID: 775388709}
   m_Layer: 0
   m_Name: Ground (1)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7395,7 +7631,7 @@ GameObject:
   - component: {fileID: 778320955}
   m_Layer: 0
   m_Name: Ground (19)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7550,6 +7786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &793661726
@@ -7642,7 +7882,7 @@ GameObject:
   - component: {fileID: 811085340}
   m_Layer: 0
   m_Name: Ground (103)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7736,6 +7976,7 @@ GameObject:
   - component: {fileID: 830133409}
   - component: {fileID: 830133408}
   - component: {fileID: 830133407}
+  - component: {fileID: 830133410}
   m_Layer: 0
   m_Name: House (1)
   m_TagString: Untagged
@@ -7814,6 +8055,19 @@ Transform:
   m_Father: {fileID: 203175478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &830133410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830133406}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &838770024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7881,6 +8135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &863994275
@@ -7897,7 +8155,7 @@ GameObject:
   - component: {fileID: 863994277}
   m_Layer: 0
   m_Name: Ground (92)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8071,7 +8329,7 @@ GameObject:
   - component: {fileID: 881118087}
   m_Layer: 0
   m_Name: Ground (55)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8168,7 +8426,7 @@ GameObject:
   - component: {fileID: 895969631}
   m_Layer: 0
   m_Name: Ground (69)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8386,6 +8644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &941072308
@@ -8399,6 +8661,7 @@ GameObject:
   - component: {fileID: 941072309}
   - component: {fileID: 941072311}
   - component: {fileID: 941072310}
+  - component: {fileID: 941072312}
   m_Layer: 0
   m_Name: pCylinder3 (2)
   m_TagString: Untagged
@@ -8476,6 +8739,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941072308}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &941072312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941072308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &948224300
 GameObject:
   m_ObjectHideFlags: 0
@@ -8490,7 +8766,7 @@ GameObject:
   - component: {fileID: 948224302}
   m_Layer: 0
   m_Name: Ground (71)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8644,6 +8920,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
       propertyPath: m_Name
       value: grassblock (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
@@ -8830,7 +9110,7 @@ GameObject:
   - component: {fileID: 970912274}
   m_Layer: 0
   m_Name: Ground (20)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8980,6 +9260,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &977150924
@@ -8996,7 +9280,7 @@ GameObject:
   - component: {fileID: 977150926}
   m_Layer: 0
   m_Name: Ground (42)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9093,7 +9377,7 @@ GameObject:
   - component: {fileID: 983948493}
   m_Layer: 0
   m_Name: Ground (32)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9248,6 +9532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &1001464504 stripped
@@ -9269,7 +9557,7 @@ GameObject:
   - component: {fileID: 1007323556}
   m_Layer: 0
   m_Name: Ground (70)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9442,7 +9730,7 @@ GameObject:
   - component: {fileID: 1026574621}
   m_Layer: 0
   m_Name: Ground (126)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9549,7 +9837,7 @@ GameObject:
   - component: {fileID: 1060742237}
   m_Layer: 0
   m_Name: Ground (128)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9699,6 +9987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &1136732520 stripped
@@ -9717,6 +10009,7 @@ GameObject:
   - component: {fileID: 1143239412}
   - component: {fileID: 1143239414}
   - component: {fileID: 1143239413}
+  - component: {fileID: 1143239415}
   m_Layer: 0
   m_Name: House2 (3)
   m_TagString: Untagged
@@ -9796,6 +10089,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143239411}
   m_Mesh: {fileID: -5327603451083163059, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1143239415
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143239411}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1159762047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
@@ -10034,6 +10340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &1184015322 stripped
@@ -10060,7 +10370,7 @@ GameObject:
   - component: {fileID: 1190008539}
   m_Layer: 0
   m_Name: Ground (75)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10157,7 +10467,7 @@ GameObject:
   - component: {fileID: 1200383589}
   m_Layer: 0
   m_Name: Ground (89)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10300,7 +10610,7 @@ GameObject:
   - component: {fileID: 1215607278}
   m_Layer: 0
   m_Name: Ground (6)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10450,6 +10760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &1223359310
@@ -10466,7 +10780,7 @@ GameObject:
   - component: {fileID: 1223359312}
   m_Layer: 0
   m_Name: Ground (36)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10563,7 +10877,7 @@ GameObject:
   - component: {fileID: 1231712455}
   m_Layer: 0
   m_Name: Ground (77)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10660,7 +10974,7 @@ GameObject:
   - component: {fileID: 1256396210}
   m_Layer: 0
   m_Name: Ground (63)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10968,7 +11282,7 @@ GameObject:
   - component: {fileID: 1303485158}
   m_Layer: 0
   m_Name: Ground (54)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11065,7 +11379,7 @@ GameObject:
   - component: {fileID: 1312357734}
   m_Layer: 0
   m_Name: Ground (91)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11159,6 +11473,7 @@ GameObject:
   - component: {fileID: 1313284451}
   - component: {fileID: 1313284453}
   - component: {fileID: 1313284452}
+  - component: {fileID: 1313284454}
   m_Layer: 0
   m_Name: House2 (4)
   m_TagString: Untagged
@@ -11238,6 +11553,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313284450}
   m_Mesh: {fileID: -5327603451083163059, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1313284454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313284450}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1353706137
 GameObject:
   m_ObjectHideFlags: 0
@@ -11252,7 +11580,7 @@ GameObject:
   - component: {fileID: 1353706139}
   m_Layer: 0
   m_Name: Ground (80)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11349,7 +11677,7 @@ GameObject:
   - component: {fileID: 1361989705}
   m_Layer: 0
   m_Name: Ground (114)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11443,6 +11771,7 @@ GameObject:
   - component: {fileID: 1362001626}
   - component: {fileID: 1362001628}
   - component: {fileID: 1362001627}
+  - component: {fileID: 1362001629}
   m_Layer: 0
   m_Name: House (5)
   m_TagString: Untagged
@@ -11521,6 +11850,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362001625}
   m_Mesh: {fileID: 4887216478360415443, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1362001629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362001625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1367366399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11587,6 +11929,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
       propertyPath: m_Name
       value: grassblock (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
@@ -11657,6 +12003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &1377243510 stripped
@@ -11678,7 +12028,7 @@ GameObject:
   - component: {fileID: 1379625983}
   m_Layer: 0
   m_Name: Ground (73)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11775,7 +12125,7 @@ GameObject:
   - component: {fileID: 1381994740}
   m_Layer: 0
   m_Name: Ground (102)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11869,6 +12219,7 @@ GameObject:
   - component: {fileID: 1387608147}
   - component: {fileID: 1387608149}
   - component: {fileID: 1387608148}
+  - component: {fileID: 1387608150}
   m_Layer: 0
   m_Name: House (6)
   m_TagString: Untagged
@@ -11947,6 +12298,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387608146}
   m_Mesh: {fileID: 4887216478360415443, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1387608150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387608146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1401382632
 GameObject:
   m_ObjectHideFlags: 0
@@ -11961,7 +12325,7 @@ GameObject:
   - component: {fileID: 1401382634}
   m_Layer: 0
   m_Name: Ground (12)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12058,7 +12422,7 @@ GameObject:
   - component: {fileID: 1404201082}
   m_Layer: 0
   m_Name: Ground (46)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12257,7 +12621,7 @@ GameObject:
   - component: {fileID: 1416901606}
   m_Layer: 0
   m_Name: Ground (141)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12441,6 +12805,7 @@ GameObject:
   - component: {fileID: 1480441788}
   - component: {fileID: 1480441790}
   - component: {fileID: 1480441789}
+  - component: {fileID: 1480441791}
   m_Layer: 0
   m_Name: pCylinder3 (4)
   m_TagString: Untagged
@@ -12518,6 +12883,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480441787}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1480441791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480441787}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1491564894
 GameObject:
   m_ObjectHideFlags: 0
@@ -12532,7 +12910,7 @@ GameObject:
   - component: {fileID: 1491564896}
   m_Layer: 0
   m_Name: Ground (34)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12629,7 +13007,7 @@ GameObject:
   - component: {fileID: 1517348271}
   m_Layer: 0
   m_Name: Ground (108)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12779,6 +13157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &1528175461
@@ -12795,7 +13177,7 @@ GameObject:
   - component: {fileID: 1528175463}
   m_Layer: 0
   m_Name: Ground (7)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12892,7 +13274,7 @@ GameObject:
   - component: {fileID: 1536508472}
   m_Layer: 0
   m_Name: Ground (47)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12989,7 +13371,7 @@ GameObject:
   - component: {fileID: 1549590415}
   m_Layer: 0
   m_Name: Ground (61)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13193,6 +13575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &1585599866
@@ -13209,7 +13595,7 @@ GameObject:
   - component: {fileID: 1585599868}
   m_Layer: 0
   m_Name: Ground (117)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13364,6 +13750,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &1658481263
@@ -13377,6 +13767,7 @@ GameObject:
   - component: {fileID: 1658481264}
   - component: {fileID: 1658481266}
   - component: {fileID: 1658481265}
+  - component: {fileID: 1658481267}
   m_Layer: 0
   m_Name: pCylinder3 (7)
   m_TagString: Untagged
@@ -13454,6 +13845,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658481263}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1658481267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658481263}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1662209002
 GameObject:
   m_ObjectHideFlags: 0
@@ -13468,7 +13872,7 @@ GameObject:
   - component: {fileID: 1662209004}
   m_Layer: 0
   m_Name: Ground (58)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13570,7 +13974,7 @@ GameObject:
   - component: {fileID: 1682646882}
   m_Layer: 0
   m_Name: Ground (4)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13672,7 +14076,7 @@ GameObject:
   - component: {fileID: 1703822440}
   m_Layer: 0
   m_Name: Ground (23)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13822,6 +14226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &1725830168
@@ -13835,6 +14243,7 @@ GameObject:
   - component: {fileID: 1725830169}
   - component: {fileID: 1725830171}
   - component: {fileID: 1725830170}
+  - component: {fileID: 1725830172}
   m_Layer: 0
   m_Name: House2 (2)
   m_TagString: Untagged
@@ -13914,6 +14323,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725830168}
   m_Mesh: {fileID: -5327603451083163059, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1725830172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725830168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1726393608
 GameObject:
   m_ObjectHideFlags: 0
@@ -13925,6 +14347,7 @@ GameObject:
   - component: {fileID: 1726393611}
   - component: {fileID: 1726393610}
   - component: {fileID: 1726393609}
+  - component: {fileID: 1726393612}
   m_Layer: 0
   m_Name: House2
   m_TagString: Untagged
@@ -14004,6 +14427,19 @@ Transform:
   m_Father: {fileID: 203175478}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1726393612
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726393608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1731490423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
@@ -14023,7 +14459,7 @@ GameObject:
   - component: {fileID: 1744706404}
   m_Layer: 0
   m_Name: Ground (16)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14125,7 +14561,7 @@ GameObject:
   - component: {fileID: 1760851538}
   m_Layer: 0
   m_Name: Ground (15)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14222,7 +14658,7 @@ GameObject:
   - component: {fileID: 1776698611}
   m_Layer: 0
   m_Name: Ground (68)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14319,7 +14755,7 @@ GameObject:
   - component: {fileID: 1779728580}
   m_Layer: 0
   m_Name: Ground (39)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14416,7 +14852,7 @@ GameObject:
   - component: {fileID: 1803631001}
   m_Layer: 0
   m_Name: Ground (5)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14513,7 +14949,7 @@ GameObject:
   - component: {fileID: 1806710118}
   m_Layer: 0
   m_Name: Ground (40)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14610,7 +15046,7 @@ GameObject:
   - component: {fileID: 1818085732}
   m_Layer: 0
   m_Name: Ground (134)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14760,6 +15196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &1818767557
@@ -14776,7 +15216,7 @@ GameObject:
   - component: {fileID: 1818767559}
   m_Layer: 0
   m_Name: Ground (30)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14965,6 +15405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &1842537621 stripped
@@ -15068,7 +15512,7 @@ GameObject:
   - component: {fileID: 1867218700}
   m_Layer: 0
   m_Name: Ground (112)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15165,7 +15609,7 @@ GameObject:
   - component: {fileID: 1874289737}
   m_Layer: 0
   m_Name: Ground (65)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15264,6 +15708,7 @@ GameObject:
   - component: {fileID: 1924485331}
   - component: {fileID: 1924485333}
   - component: {fileID: 1924485332}
+  - component: {fileID: 1924485334}
   m_Layer: 0
   m_Name: pCylinder3 (9)
   m_TagString: Untagged
@@ -15341,6 +15786,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924485330}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1924485334
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924485330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1933473859
 GameObject:
   m_ObjectHideFlags: 0
@@ -15449,6 +15907,7 @@ GameObject:
   - component: {fileID: 1949490425}
   - component: {fileID: 1949490427}
   - component: {fileID: 1949490426}
+  - component: {fileID: 1949490428}
   m_Layer: 0
   m_Name: pCylinder3 (6)
   m_TagString: Untagged
@@ -15526,6 +15985,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949490424}
   m_Mesh: {fileID: 8321685774571456786, guid: dbb78d03674eb9e419bdf6cc2ff713f9, type: 3}
+--- !u!65 &1949490428
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949490424}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.065, y: 0.065, z: 0.065}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1949655368 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
@@ -15598,6 +16070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &1977984094 stripped
@@ -15624,7 +16100,7 @@ GameObject:
   - component: {fileID: 1998118723}
   m_Layer: 0
   m_Name: Ground (124)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15721,7 +16197,7 @@ GameObject:
   - component: {fileID: 2004182338}
   m_Layer: 0
   m_Name: Ground (67)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16069,7 +16545,7 @@ GameObject:
   - component: {fileID: 2047829343}
   m_Layer: 0
   m_Name: Ground (43)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16219,6 +16695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1001 &2081072857
@@ -16288,6 +16768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!4 &2089735936 stripped
@@ -16309,7 +16793,7 @@ GameObject:
   - component: {fileID: 2092458986}
   m_Layer: 0
   m_Name: Ground (83)
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16406,7 +16890,7 @@ GameObject:
   - component: {fileID: 2094964276}
   m_Layer: 0
   m_Name: Ground (50)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16556,6 +17040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grassblock (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4e93abd3187214bb781ca3d9fc95b7, type: 3}
 --- !u!1 &2128859553
@@ -16572,7 +17060,7 @@ GameObject:
   - component: {fileID: 2128859555}
   m_Layer: 0
   m_Name: Ground (115)
-  m_TagString: Untagged
+  m_TagString: Grass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
