@@ -48,7 +48,7 @@ public class Clickable : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-            Debug.Log(hit.transform.gameObject.name);
+                Debug.Log(hit.transform.gameObject.name);
                 if (hit.transform.gameObject.tag == "Clickable")
                 {
                     ConstructPowerPlant(hit.transform.position, coal, hit.transform.gameObject);
