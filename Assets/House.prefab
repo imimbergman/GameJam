@@ -4840,6 +4840,7 @@ GameObject:
   - component: {fileID: 3417301952368015283}
   - component: {fileID: 1743994005141675106}
   - component: {fileID: 8383218855203882359}
+  - component: {fileID: 99261043406622316}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -4918,3 +4919,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &99261043406622316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290926615658992248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0dddc1f945f8444184934075f468022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LerpAmount: 0.5
+  lerpSpeed: 0
+  vibrationSpeed: 0.1

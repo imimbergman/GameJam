@@ -10,6 +10,9 @@ using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
+using Random = UnityEngine.Random;
 using Timer = System.Timers.Timer;
 
 public class Clickable : MonoBehaviour
@@ -31,6 +34,8 @@ public class Clickable : MonoBehaviour
     float LerpTimer;
 
     List<PowerPlant> powerPlants = new List<PowerPlant>();
+    List<GameObject> placedTrees = new List<GameObject>();
+    public List<GameObject> trees = new List<GameObject>();
 
     PowerPlant coal = new PowerPlant(
         100,
@@ -91,11 +96,17 @@ public class Clickable : MonoBehaviour
                     //this.enabled = false;
                 } else if (hit.transform.gameObject.tag == "Grass")
                 {
-                    Debug.Log("Grass");
+                    MakeTree(hit.transform.gameObject);
                 }
             }
         }
         UpdateUi();
+    }
+
+    void MakeTree(GameObject parent)
+    {
+        var randomPos = new Vector3(Random.Range(-0.5f, 0.5f), 0.5f, Random.Range(-0.5f, 0.5f));
+        placedTrees.Add(Instantiate(trees[(int)Random.Range(0,trees.Count)], parent.transform.position+ randomPos, Quaternion.identity));
     }
 
     void ConstructPowerPlant(Vector3 position, PowerPlant plant, GameObject parent)
