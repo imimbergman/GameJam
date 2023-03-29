@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18246762, g: 0.22817984, b: 0.30725408, a: 1}
+  m_IndirectSpecularColor: {r: 0.18246797, g: 0.22818062, b: 0.30725542, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14383,12 +14383,12 @@ GameObject:
   - component: {fileID: 393979024}
   - component: {fileID: 393979023}
   m_Layer: 0
-  m_Name: GmaeOver
+  m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &393979022
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23784,8 +23784,7 @@ Transform:
   m_LocalPosition: {x: -6, y: 0.53, z: -4}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1717464738}
+  m_Children: []
   m_Father: {fileID: 1837535997}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

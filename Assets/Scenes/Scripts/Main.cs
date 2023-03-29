@@ -20,6 +20,8 @@ public class Main : MonoBehaviour
     public GameObject coalPlant;
     public GameObject solarPlant;
     public GameObject windPlant;
+    GameObject gameOver;
+    GameObject menu;
 
     public float climateHealth = 1.0f;
     public int moneyAmount;
@@ -71,6 +73,8 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameOver = GameObject.Find("GameOver");
+        gameOver.SetActive(false);
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         climateBar = GameObject.Find("HPBar").GetComponent<Image>();
         moneyAmount = 1000;
@@ -180,11 +184,14 @@ public class Main : MonoBehaviour
 
         moneyText.SetText("" + moneyAmount.ToString());
         climateBar.fillAmount = climateHealth;
+
+        if (climateHealth <= 0.02f)
+            gameOver.SetActive(true);
     }
 
     void updateValues(object source, ElapsedEventArgs e)
     {
-        if (powerPlants.Count > 0)
+        if (powerPlants.Count > 0 && climateHealth <= 0.02f)
         {
             float FinalHealth = 1;
             LerpStart = climateHealth;
@@ -197,7 +204,17 @@ public class Main : MonoBehaviour
             }
             FinalHealth *= Mathf.Pow(1.01f, placedTrees.Count);
             LerpTarget = climateHealth * FinalHealth;
+            //if (LerpTarget > 1)
+            //    LerpTarget = 1;
         }
+
+    }
+
+    [ContextMenu("Make World Die")]
+    public void DoCheat()
+    {
+        Debug.Log("Run Cheat");
+        LerpTarget = 0.01f;
     }
 }
 
