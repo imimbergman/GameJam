@@ -15,7 +15,7 @@ using Image = UnityEngine.UI.Image;
 using Random = UnityEngine.Random;
 using Timer = System.Timers.Timer;
 
-public class Main : MonoBehaviour
+public class Clickable : MonoBehaviour
 {
     public GameObject coalPlant;
     public GameObject solarPlant;
@@ -78,9 +78,6 @@ public class Main : MonoBehaviour
         timer.Elapsed += new ElapsedEventHandler(updateValues);
         timer.Interval = 5000;
         timer.Start();
-        GameObject.Find("WindInfo").GetComponent<TextMeshProUGUI>().SetText($"Build: ${wind.productionCost} Earnings: ${wind.runningEarnings/5}/sec Climate impact: -{(1 - wind.runningClimateImpact) * 100}%");
-        GameObject.Find("SolarInfo").GetComponent<TextMeshProUGUI>().SetText($"Build: ${solar.productionCost} Earnings: ${solar.runningEarnings/5}/sec Climate impact: -{(1 - solar.runningClimateImpact) * 100}%");
-        GameObject.Find("CoalInfo").GetComponent<TextMeshProUGUI>().SetText($"Build: ${coal.productionCost} Earnings: ${coal.runningEarnings/5}/sec Climate impact: -{(1- coal.runningClimateImpact)*100}%");
     }
 
     // Update is called once per frame
@@ -108,11 +105,6 @@ public class Main : MonoBehaviour
 
     void MakeTree(GameObject parent)
     {
-        if (moneyAmount < 10)
-        {
-            return;
-        }
-        moneyAmount -= 10;
         var randomPos = new Vector3(Random.Range(-0.5f, 0.5f), 0.5f, Random.Range(-0.5f, 0.5f));
         placedTrees.Add(Instantiate(trees[(int)Random.Range(0,trees.Count)], parent.transform.position+ randomPos, Quaternion.identity));
     }
@@ -195,7 +187,6 @@ public class Main : MonoBehaviour
                 //Lerp(climateHealth, climateHealth * powerPlants[i].runningClimateImpact, 0);
                 FinalHealth *= powerPlants[i].runningClimateImpact;
             }
-            FinalHealth *= Mathf.Pow(1.01f, placedTrees.Count);
             LerpTarget = climateHealth * FinalHealth;
         }
     }
