@@ -13,11 +13,13 @@ public class Lerp : MonoBehaviour
     private ParticleSystem ps;
     Vector3 CurrentPosition;
     Vector3 TargetPosition;
+    public Vector3 PositionOffset = new Vector3(0,0,0);
 
     // Start is called before the first frame update
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
+        transform.position += PositionOffset;
         CurrentPosition = transform.position;
         TargetPosition = CurrentPosition + new Vector3(0, LerpAmount, 0);
     }
@@ -31,7 +33,7 @@ public class Lerp : MonoBehaviour
         if (lerpValue >= 1)
         {
             transform.position = TargetPosition = CurrentPosition + new Vector3(0, LerpAmount, 0);
-            ps.Stop();
+            //ps.Stop();
             this.enabled = false;
         }
     }

@@ -40,7 +40,7 @@ public class Main : MonoBehaviour
     float LerpTimer;
 
     List<PowerPlant> powerPlants = new List<PowerPlant>();
-    List<GameObject> placedTrees = new List<GameObject>();
+    public List<GameObject> placedTrees = new List<GameObject>();
     public List<GameObject> trees = new List<GameObject>();
 
     PowerPlant coal = new PowerPlant(
@@ -84,7 +84,7 @@ public class Main : MonoBehaviour
         gameOver.SetActive(false);
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         climateBar = GameObject.Find("HPBar").GetComponent<Image>();
-        moneyAmount = 500;
+        moneyAmount = 200;
         timer = new System.Timers.Timer();
         timer.Elapsed += new ElapsedEventHandler(updateValues);
         timer.Interval = 5000;
@@ -286,30 +286,38 @@ public class Main : MonoBehaviour
             //if (LerpTarget > 1)
             //    LerpTarget = 1;
         }
+        Debug.Log(placedTrees.Count > 0);
         if(placedTrees.Count > 0)
         {
-            if(climateHealth != 1)
+            if (climateHealth != 1.0f)
             {
                 int maxDelete = Mathf.RoundToInt(placedTrees.Count * (1 - climateHealth));
-                int deleteTreeNumber = Random.Range(0, maxDelete);
-                for (int i = 0; i < deleteTreeNumber; i++)
+                //int deleteTreeNumber = Random.Range(0, maxDelete);
+                Debug.Log($"Killing {maxDelete} trees");
+                for (int i = 0; i < maxDelete; i++)
                 {
-                    int o = (int)Random.Range(0.0f, placedTrees.Count);
-                    Destroy(placedTrees[o]);
-                    placedTrees.RemoveAt(o);
+                    Debug.Log($"Killing {i}");
+                    int o = Random.Range(0, placedTrees.Count);
+                    Destroy(placedTrees[o].transform.gameObject);
+                    placedTrees.RemoveAt(0);
                 }
             } 
             else
             {
                 int maxDelete = Mathf.RoundToInt(placedTrees.Count * 0.1f);
-                int deleteTreeNumber = Random.Range(0, maxDelete);
-                for (int i = 0; i < deleteTreeNumber; i++)
+                //int deleteTreeNumber = Random.Range(0, maxDelete);
+                Debug.Log($"Killing {maxDelete} trees");
+                for (int i = 0; i < maxDelete; i++)
                 {
-                    int o = (int)Random.Range(0.0f, placedTrees.Count);
-                    Destroy(placedTrees[o]);
-                    placedTrees.RemoveAt(o);
+                    Debug.Log($"Killing {i}");
+
+                    //int o = Random.Range(0, placedTrees.Count);
+                    Debug.Log($"Random {1}");
+                    Destroy(placedTrees[0].transform.gameObject);
+                    placedTrees.RemoveAt(0);
                 }
             }
+            Debug.Log("Done");
         }
 
     }
