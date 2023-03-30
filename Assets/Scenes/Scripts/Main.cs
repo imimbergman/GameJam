@@ -11,6 +11,7 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UIElements.Button;
 using Image = UnityEngine.UI.Image;
 using Random = UnityEngine.Random;
 using Timer = System.Timers.Timer;
@@ -22,6 +23,9 @@ public class Main : MonoBehaviour
     public GameObject windPlant;
     GameObject gameOver;
     GameObject menu;
+    GameObject tearMenu;
+    public GameObject instanceParent = null;
+    PowerPlant takenPlant = null;
 
     public float climateHealth = 1.0f;
     public int moneyAmount;
@@ -43,7 +47,7 @@ public class Main : MonoBehaviour
         100,
         150,
         40,
-        0.8f,
+        0.5f,
         0.8f,
         0.9f,
         Types.Coal
@@ -73,24 +77,29 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tearMenu = GameObject.Find("TearDown");
+        tearMenu.SetActive(false);
+        menu = GameObject.Find("PurchaseManu");
         gameOver = GameObject.Find("GameOver");
         gameOver.SetActive(false);
         moneyText = GameObject.Find("MoneyText").GetComponent<TextMeshProUGUI>();
         climateBar = GameObject.Find("HPBar").GetComponent<Image>();
-        moneyAmount = 1000;
+        moneyAmount = 500;
         timer = new System.Timers.Timer();
         timer.Elapsed += new ElapsedEventHandler(updateValues);
         timer.Interval = 5000;
         timer.Start();
+        //GameObject.Find("BuildCoal").GetComponent<Button>().onClick.AddListener();
         GameObject.Find("WindInfo").GetComponent<TextMeshProUGUI>().SetText($"Build: ${wind.productionCost} Earnings: ${wind.runningEarnings/5}/sec Climate impact: -{(1 - wind.runningClimateImpact) * 100}%");
         GameObject.Find("SolarInfo").GetComponent<TextMeshProUGUI>().SetText($"Build: ${solar.productionCost} Earnings: ${solar.runningEarnings/5}/sec Climate impact: -{(1 - solar.runningClimateImpact) * 100}%");
         GameObject.Find("CoalInfo").GetComponent<TextMeshProUGUI>().SetText($"Build: ${coal.productionCost} Earnings: ${coal.runningEarnings/5}/sec Climate impact: -{(1- coal.runningClimateImpact)*100}%");
+        menu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && instanceParent==null)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -99,8 +108,29 @@ public class Main : MonoBehaviour
                 Debug.Log(hit.transform.gameObject.name);
                 if (hit.transform.gameObject.tag == "Clickable")
                 {
-                    ConstructPowerPlant(hit.transform.position, coal, hit.transform.gameObject);
-                    //this.enabled = false;
+                    instanceParent = hit.transform.gameObject;
+                    if (powerPlants.Count > 0)
+                    {
+                        for (int i = 0; i < powerPlants.Count; i++)
+                        {
+                            if (powerPlants[i].parent == hit.transform.gameObject)
+                            {
+                                takenPlant = powerPlants[i];
+                            }
+                        }
+                    }
+                    if (takenPlant == null)
+                    {
+                        menu.SetActive(true);
+                    } 
+                    else
+                    {
+                        tearMenu.SetActive(true);
+                        GameObject.Find("TearMenu").GetComponent<TextMeshProUGUI>().SetText($"{takenPlant.type.ToString()} Powerplant");
+                        GameObject.Find("TearInfo").GetComponent<TextMeshProUGUI>().SetText($"Teardown cost: ${takenPlant.removalCost}");
+                    }
+                    //ConstructPowerPlant(hit.transform.position, coal, hit.transform.gameObject);
+
                 } else if (hit.transform.gameObject.tag == "Grass")
                 {
                     MakeTree(hit.transform.gameObject);
@@ -121,7 +151,27 @@ public class Main : MonoBehaviour
         placedTrees.Add(Instantiate(trees[(int)Random.Range(0,trees.Count)], parent.transform.position+ randomPos, Quaternion.identity));
     }
 
-    void ConstructPowerPlant(Vector3 position, PowerPlant plant, GameObject parent)
+    public void TearPowerPlant()
+    {
+        for (int i = 0; i < powerPlants.Count; i++)
+        {
+            if (powerPlants[i] == takenPlant)
+            {
+                if (moneyAmount < powerPlants[i].removalCost)
+                {
+                    return;
+                }
+                moneyAmount -= powerPlants[i].removalCost;
+                Destroy(powerPlants[i].instance);
+                powerPlants.RemoveAt(i);
+                takenPlant = null;
+                tearMenu.SetActive(false);
+                instanceParent = null;
+            }
+        }
+    }
+
+    void ConstructPowerPlant(PowerPlant plant, GameObject parent)
     {
         if (powerPlants.Count > 0)
         {
@@ -148,23 +198,44 @@ public class Main : MonoBehaviour
 
         if (plant.type == Types.Solar)
         {
-            spawn = Instantiate(solarPlant, position, Quaternion.identity);
+            spawn = Instantiate(solarPlant, parent.transform.position, Quaternion.identity);
             plant.instance = spawn;
         } 
         else if (plant.type == Types.Coal)
         {
-            spawn = Instantiate(coalPlant, position, Quaternion.identity);
+            spawn = Instantiate(coalPlant, parent.transform.position, Quaternion.identity);
             plant.instance = spawn;
         }
         else if (plant.type == Types.Wind)
         {
-            spawn = Instantiate(windPlant, position, Quaternion.identity);
+            spawn = Instantiate(windPlant, parent.transform.position, Quaternion.identity);
             plant.instance = spawn;
         }
 
         powerPlants.Add(plant);
         Debug.Log("Created");
         
+    }
+
+    public void BuildCoal()
+    {
+        ConstructPowerPlant(coal, instanceParent);
+        instanceParent = null;
+        menu.SetActive(false);
+    }
+
+    public void BuildSolar()
+    {
+        ConstructPowerPlant(solar, instanceParent);
+        instanceParent = null;
+        menu.SetActive(false);
+    }
+
+    public void BuildWind()
+    {
+        ConstructPowerPlant(wind, instanceParent);
+        instanceParent = null;
+        menu.SetActive(false);
     }
 
     void UpdateUi()
@@ -189,9 +260,17 @@ public class Main : MonoBehaviour
             gameOver.SetActive(true);
     }
 
+    public void HideUi()
+    {
+        takenPlant = null;
+        tearMenu.SetActive(false);
+        menu.SetActive(false);
+        instanceParent = null;
+    }
+
     void updateValues(object source, ElapsedEventArgs e)
     {
-        if (powerPlants.Count > 0 && climateHealth <= 0.02f)
+        if (powerPlants.Count > 0 && climateHealth > 0.02f)
         {
             float FinalHealth = 1;
             LerpStart = climateHealth;
@@ -206,6 +285,31 @@ public class Main : MonoBehaviour
             LerpTarget = climateHealth * FinalHealth;
             //if (LerpTarget > 1)
             //    LerpTarget = 1;
+        }
+        if(placedTrees.Count > 0)
+        {
+            if(climateHealth != 1)
+            {
+                int maxDelete = Mathf.RoundToInt(placedTrees.Count * (1 - climateHealth));
+                int deleteTreeNumber = Random.Range(0, maxDelete);
+                for (int i = 0; i < deleteTreeNumber; i++)
+                {
+                    int o = (int)Random.Range(0.0f, placedTrees.Count);
+                    Destroy(placedTrees[o]);
+                    placedTrees.RemoveAt(o);
+                }
+            } 
+            else
+            {
+                int maxDelete = Mathf.RoundToInt(placedTrees.Count * 0.1f);
+                int deleteTreeNumber = Random.Range(0, maxDelete);
+                for (int i = 0; i < deleteTreeNumber; i++)
+                {
+                    int o = (int)Random.Range(0.0f, placedTrees.Count);
+                    Destroy(placedTrees[o]);
+                    placedTrees.RemoveAt(o);
+                }
+            }
         }
 
     }
