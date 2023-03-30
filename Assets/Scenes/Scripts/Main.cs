@@ -162,7 +162,7 @@ public class Main : MonoBehaviour
                     return;
                 }
                 moneyAmount -= powerPlants[i].removalCost;
-                Destroy(powerPlants[i].instance);
+                powerPlants[i].instance.SetActive(false);
                 powerPlants.RemoveAt(i);
                 takenPlant = null;
                 tearMenu.SetActive(false);
@@ -298,7 +298,7 @@ public class Main : MonoBehaviour
                 {
                     Debug.Log($"Killing {i}");
                     int o = Random.Range(0, placedTrees.Count);
-                    Destroy(placedTrees[o].transform.gameObject);
+                    placedTrees[0].transform.gameObject.SetActive(false);
                     placedTrees.RemoveAt(0);
                 }
             } 
@@ -313,7 +313,7 @@ public class Main : MonoBehaviour
 
                     //int o = Random.Range(0, placedTrees.Count);
                     Debug.Log($"Random {1}");
-                    Destroy(placedTrees[0].transform.gameObject);
+                    placedTrees[0].transform.gameObject.SetActive(false);
                     placedTrees.RemoveAt(0);
                 }
             }
